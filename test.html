@@ -1,0 +1,240 @@
+h<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rahul International School — MUN 5.0</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Ccircle%20cx='32'%20cy='32'%20r='30'%20fill='%23D4AF37'/%3E%3C/svg%3E" />
+  <meta name="theme-color" content="#D4AF37" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --gold: #D4AF37;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background: #f8f9fa;
+      color: #222;
+      font-weight: bold; /* make all text bold */
+    }
+    .gold-gradient {
+      background: linear-gradient(160deg,#a54e07,#b47e11,#fef1a2,#bc881b,#a54e07);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+      font-weight: bold;
+    }
+    .team-section {
+      padding: 2rem 1rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .leader {
+      display: flex;
+      align-items: center; /* vertically centered */
+      justify-content: center; /* horizontally centered */
+      gap: 2rem;
+      margin-bottom: 3rem;
+      flex-wrap: wrap;
+      text-align: center; /* center all text inside */
+    }
+    .leader img {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      object-fit: cover;
+      flex-shrink: 0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      margin: 0 auto;
+    }
+    .leader-text {
+      flex: 1;
+      line-height: 1.8;
+      font-size: 1.05rem;
+      text-align: center; /* ensure text is centered */
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    .card {
+      text-align: center; /* center everything in card */
+    }
+    .card img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+    }
+    .card h3 {
+      margin-top: 1rem;
+      font-size: 1.1rem;
+      text-align: center; /* center text under image */
+    }
+    @media (max-width: 1024px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 600px) {
+      .leader {
+        flex-direction: column;
+      }
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body class="bg-white leading-relaxed">
+
+<header class="relative">
+  <!-- HERO IMAGE -->
+  <div class="h-64 md:h-[420px] lg:h-[520px] relative overflow-hidden">
+    <img src="https://pbs.twimg.com/media/GzYamtya4AQJNEI?format=jpg&name=small" class="w-full h-full object-cover" alt="RIS campus"/>
+    <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-black/10 to-black/30"></div>
+
+    <!-- dark overlay for contrast -->
+      <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-black/10 to-black/30"></div>
+
+      <!-- logo in top-left corner -->
+      <a href="#" class="absolute left-6 top-6 z-20 inline-flex items-center gap-3" aria-label="Rahul International School home">
+        <img src="data:image/jpeg;base64,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" alt="RIS logo" class="w-14 h-14 rounded-lg border-2 border-[var(--gold)] object-cover shadow-lg" />
+        <div class="hidden sm:block text-white">
+          <div class="text-sm font-semibold tracking-tight">Rahul International School</div>
+          <div class="text-xs opacity-80">MUN 5.0</div>
+        </div>
+      </a>
+
+    <!-- TITLE -->
+    <div class="absolute inset-0 z-20 flex flex-col items-center justify-center px-6 text-center text-white">
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold drop-shadow-lg">WELCOME TO <span class="text-[var(--gold)]">RISMUN 5.0</span></h1>
+      <p class="mt-3 text-sm sm:text-base md:text-lg max-w-2xl opacity-90">An immersive academic simulation where students develop leadership, diplomacy, and debate skills.</p>
+    </div>
+  </div>
+
+<!-- small nav (optional) -->
+    <nav class="absolute right-6 top-6 z-30 hidden md:flex items-center gap-4">
+      <a href="#about" class="text-sm text-white/90 hover:text-white">About</a>
+      <a href="Team.html" class="text-sm text-white/90 hover:text-white">Team</a>
+      <a href="#committees" class="text-sm text-white/90 hover:text-white">Committees</a>
+      <a href="#messages" class="text-sm text-white/90 hover:text-white">Messages</a>
+      <a href="#contact" class="text-sm text-white/90 hover:text-white">Contact</a>
+    </nav>
+
+</header>
+
+<section class="team-section">
+<!-- add spacing before Meet the OC -->
+  <div class="mt-12 mb-6 text-center">
+    <h2 class="gold-gradient text-4xl">Meet the OC</h2>
+  </div>
+
+  <!-- Secretary General -->
+  <div class="leader">
+    <img src="https://pbs.twimg.com/media/GzYmcc2a4AQ1mFz?format=jpg&name=small" alt="Secretary General">
+    <div class="leader-text">
+      <h3 class="gold-gradient text-2xl">Secretary General</h3>
+      <p>
+        Welcome to RISMUN 5.0, where caffeine is currency, diplomacy is dramatic, and alliances shift faster than Wi-Fi signals. Placards up, game on!
+      </p>
+    </div>
+  </div>
+
+  <!-- Deputy Secretary General -->
+  <div class="leader">
+    <img src="https://pbs.twimg.com/media/GzYmwpva4AAfn0v?format=jpg&name=small" alt="Deputy Secretary General">
+    <div class="leader-text">
+      <h3 class="gold-gradient text-2xl">Deputy Secretary General</h3>
+      <p>
+        Welcome to RISMUN 5.0 — where every word can forge alliances or break them. Read the room, read the rules, and read your country’s foreign policy.
+      </p>
+    </div>
+  </div>
+
+  <!-- Other Heads -->
+  <div class="grid">
+    <div class="card">
+      <img src="https://pbs.twimg.com/media/GzYqbzSa4AgWGFQ?format=jpg&name=small" alt="Head of IT">
+      <h3 class="gold-gradient">Head of IT</h3>
+    </div>
+    <div class="card">
+      <img src="https://pbs.twimg.com/media/GzYnefjbEAAXDqG?format=jpg&name=small" alt="Head of Marketing">
+      <h3 class="gold-gradient">Head of Marketing</h3>
+    </div>
+    <div class="card">
+      <img src="https://pbs.twimg.com/media/GzYob_Ua4AIV0Xh?format=jpg&name=small" alt="Head of Security">
+      <h3 class="gold-gradient">Head of Security</h3>
+    </div>
+    <div class="card">
+      <img src="https://pbs.twimg.com/media/GzYqFDWa4AU57RK?format=jpg&name=small" alt="Head of Social Media">
+      <h3 class="gold-gradient">Head of Social Media</h3>
+    </div>
+    <div class="card">
+      <img src="https://pbs.twimg.com/media/Gzvz3z7agAEtnC4?format=jpg&name=900x900" alt="Head of Operations">
+      <h3 class="gold-gradient">Head of Operations</h3>
+    </div>
+    <div class="card">
+        <img src="https://pbs.twimg.com/media/GzYn47WbcAAJsB0?format=jpg&name=small" alt="Head of Decor">
+        <h3 class="gold-gradient">Head of Decor</h3>
+      </div>
+      <div class="card">
+        <img src="https://pbs.twimg.com/media/GzYnK4Pa4AIRYcG?format=jpg&name=small" alt="Head of IP">
+        <h3 class="gold-gradient">Head of IP</h3>
+      </div>
+      <div class="card">
+        <img src="https://pbs.twimg.com/media/GzYpGgWbsAAZ5qL?format=jpg&name=small" alt="Head of Photography">
+        <h3 class="gold-gradient">Head of Photography</h3>
+      </div>
+  </div>
+</section>
+    <!-- FOOTER -->
+  <footer id="contact" class="bg-[var(--pastel-blue)] py-10">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+        <div>
+          <h4 class="font-semibold">Connect with us</h4>
+          <p class="text-sm mt-1">Email: <a href="mailto:rismunitdepartment@gmail.com" class="text-[var(--gold)]">rismunitdepartment@gmail.com</a></p>
+        </div>
+        <div class="flex items-center gap-3 justify-center">
+            <a href="https://www.instagram.com/rismun5.0?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" aria-label="Instagram" class="w-9 h-9 flex items-center justify-center rounded-full bg-white shadow hover:scale-105 transition-transform" title="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5z" stroke="var(--gold)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 8.5a3.5 3.5 0 100 7 3.5 3.5 0 000-7z" stroke="var(--gold)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+                <circle cx="17.5" cy="6.5" r="0.6" fill="var(--gold)" />
+              </svg>
+            </a>
+
+            <a href="https://www.facebook.com/RISMIRAROADCBSE/" aria-label="Facebook" class="w-9 h-9 flex items-center justify-center rounded-full bg-white shadow hover:scale-105 transition-transform" title="Facebook">
+              <svg width="14" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M22 12.07C22 6.58 17.52 2 12.03 2 6.55 2 2.07 6.58 2.07 12.07c0 4.99 3.66 9.13 8.34 9.88v-6.99H8.08V12h2.33V9.8c0-2.5 1.49-3.88 3.77-3.88 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.77l-.44 2.9h-2.33v6.99c4.68-.75 8.34-4.89 8.34-9.88z" fill="var(--gold)" />
+              </svg>
+            </a>
+
+            <a href="https://www.youtube.com/c/RahulEducationSociety" aria-label="YouTube" class="w-9 h-9 flex items-center justify-center rounded-full bg-white shadow hover:scale-105 transition-transform" title="YouTube">
+              <svg width="18" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M23.5 7.2a3 3 0 00-2.12-2.14C19.5 4.6 12 4.6 12 4.6s-7.5 0-9.38.46A3.01 3.01 0 00.5 7.2 31.68 31.68 0 000 12a31.68 31.68 0 00.5 4.8 3.01 3.01 0 002.12 2.14C4.5 19.4 12 19.4 12 19.4s7.5 0 9.38-.46a3.01 3.01 0 002.12-2.14A31.68 31.68 0 0024 12a31.68 31.68 0 00-.5-4.8z" fill="var(--gold)" />
+                <path d="M9.55 15.57V8.43L15.82 12l-6.27 3.57z" fill="#fff" opacity="0.95" />
+              </svg>
+            </a>
+        </div>
+      </div>
+      <p class="text-sm text-gray-700 mt-6">© 2025 Rahul International School MUN 5.0. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
